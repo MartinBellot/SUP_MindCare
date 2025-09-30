@@ -6,6 +6,7 @@ import '../../features/mood/mood_history_screen.dart';
 import '../../features/meditation/meditation_screen.dart';
 import '../../features/analytics/analytics_screen.dart';
 import '../../features/profile/profile_screen.dart';
+import '../../features/resources/screens/resources_screen.dart';
 import '../../shared/widgets/main_navigation.dart';
 
 /// Configuration du routing de l'application
@@ -16,6 +17,7 @@ class AppRouter {
   static const String meditation = '/meditation';
   static const String analytics = '/analytics';
   static const String profile = '/profile';
+  static const String resources = '/resources';
 
   /// Configuration du router
   static final GoRouter router = GoRouter(
@@ -67,6 +69,13 @@ class AppRouter {
             path: profile,
             name: 'profile',
             builder: (context, state) => const ProfileScreen(),
+          ),
+          
+          // Ressources et aide
+          GoRoute(
+            path: resources,
+            name: 'resources',
+            builder: (context, state) => const ResourcesScreen(),
           ),
         ],
       ),

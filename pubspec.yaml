@@ -44,6 +44,9 @@ dependencies:
   # Networking (for future features)
   dio: ^5.7.0
   
+  # URL Launcher for external links
+  url_launcher: ^6.3.0
+  
   # Notifications
   flutter_local_notifications: ^17.2.3
   

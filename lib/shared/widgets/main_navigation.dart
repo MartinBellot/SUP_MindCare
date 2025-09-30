@@ -63,10 +63,10 @@ class _BottomNavigationBar extends StatelessWidget {
                 onTap: () => context.go('/meditation'),
               ),
               _NavigationItem(
-                icon: Icons.analytics_rounded,
-                label: 'Insights',
-                isSelected: currentLocation == '/analytics',
-                onTap: () => context.go('/analytics'),
+                icon: Icons.support_agent_rounded,
+                label: 'Ressources',
+                isSelected: currentLocation == '/resources',
+                onTap: () => context.go('/resources'),
               ),
               _NavigationItem(
                 icon: Icons.person_rounded,
