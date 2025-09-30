@@ -10,9 +10,14 @@ import 'core/models/mood_entry.dart';
 import 'core/models/meditation_session.dart';
 import 'core/models/user_profile.dart';
 
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+
 /// Point d'entrée de l'application de santé mentale
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+
+  setUrlStrategy(PathUrlStrategy());
   
   // Configuration du système overlay pour dark theme
   SystemChrome.setSystemUIOverlayStyle(AppTheme.systemOverlayStyle);

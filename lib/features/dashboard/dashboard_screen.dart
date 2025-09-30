@@ -7,6 +7,7 @@ import '../../shared/widgets/quick_actions.dart';
 import '../../shared/widgets/mental_weather_card.dart';
 import '../../shared/widgets/modern_stats_card.dart';
 import '../../shared/widgets/animated_wellness_ring.dart';
+import 'package:go_router/go_router.dart';
 
 /// Écran principal - Dashboard ultra moderne de santé mentale
 class DashboardScreen extends StatefulWidget {
@@ -159,7 +160,13 @@ class _DashboardScreenState extends State<DashboardScreen>
   }
 
   Widget _buildProfileAvatar() {
-    return Stack(
+    return GestureDetector(
+      onTap: () {
+        // Navigation vers le profil utilisateur
+        context.go('/profile');
+      },
+      child:
+    Stack(
       children: [
         Container(
           width: 48,
@@ -203,7 +210,7 @@ class _DashboardScreenState extends State<DashboardScreen>
           ),
         ),
       ],
-    ).animate().scale(delay: 600.ms);
+    )).animate().scale(delay: 600.ms);
   }
 
   Widget _buildStatsSection() {
