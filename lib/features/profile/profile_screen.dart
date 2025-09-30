@@ -86,7 +86,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   Widget _buildProfileHeader() {
     return SliverAppBar(
-      expandedHeight: 280,
+      expandedHeight: 308,
       floating: true,
       pinned: false,
       backgroundColor: AppColors.background,
