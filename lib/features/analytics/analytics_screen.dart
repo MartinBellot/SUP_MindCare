@@ -76,7 +76,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen>
 
   Widget _buildHeader() {
     return SliverAppBar(
-      expandedHeight: 140,
+      expandedHeight: 200,
       floating: true,
       pinned: false,
       backgroundColor: AppColors.background,

@@ -90,12 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       floating: true,
       pinned: false,
       backgroundColor: AppColors.background,
-      elevation: 0,
-      leading: IconButton(
-        onPressed: () => Navigator.of(context).pop(),
-        icon: const Icon(Icons.arrow_back_ios_rounded),
-        color: AppColors.primary,
-      ),
+      elevation: 0, 
       actions: [
         IconButton(
           onPressed: () {
