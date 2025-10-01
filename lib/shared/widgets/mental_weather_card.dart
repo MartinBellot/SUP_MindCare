@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:go_router/go_router.dart';
 import '../../core/theme/theme.dart';
 
 /// Hero card moderne pour afficher la météo mentale
@@ -58,7 +57,7 @@ class _MentalWeatherCardState extends State<MentalWeatherCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250 ,
+      height: 250,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -76,14 +75,6 @@ class _MentalWeatherCardState extends State<MentalWeatherCard> {
       ),
       child: Stack(
         children: [
-          // Motif de fond
-          Positioned.fill(
-            child: CustomPaint(
-              painter: WeatherPatternPainter(
-                color: Colors.white.withOpacity(0.1),
-              ),
-            ),
-          ),
           
           // Contenu principal
           Padding(
@@ -118,8 +109,7 @@ class _MentalWeatherCardState extends State<MentalWeatherCard> {
                             ),
                           ),
                           Text(
-                            DateTime.now().day.toString().padLeft(2, '0') + 
-                            '/${DateTime.now().month.toString().padLeft(2, '0')}',
+                            '${DateTime.now().day.toString().padLeft(2, '0')}/${DateTime.now().month.toString().padLeft(2, '0')}',
                             style: AppTypography.caption1.copyWith(
                               color: Colors.white.withOpacity(0.7),
                             ),
@@ -172,9 +162,7 @@ class _MentalWeatherCardState extends State<MentalWeatherCard> {
                     ),
                   ],
                 ),
-                
                 const SizedBox(height: AppSpacing.lg),
-                
                 // Métriques détaillées
                 Row(
                   children: [
@@ -252,34 +240,4 @@ class _WeatherMetric extends StatelessWidget {
       ],
     );
   }
-}
-
-/// Painter pour créer un motif de fond subtil
-class WeatherPatternPainter extends CustomPainter {
-  final Color color;
-
-  WeatherPatternPainter({required this.color});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..style = PaintingStyle.fill;
-
-    // Créer un motif de cercles subtils
-    for (int i = 0; i < 5; i++) {
-      for (int j = 0; j < 3; j++) {
-        final x = (size.width / 4) * i;
-        final y = (size.height / 2) * j;
-        canvas.drawCircle(
-          Offset(x, y),
-          20.0 - (i * 2),
-          paint,
-        );
-      }
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }

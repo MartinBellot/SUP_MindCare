@@ -147,11 +147,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 shape: BoxShape.circle,
                                 gradient: AppColors.premiumGradient,
                               ),
-                              child: const Icon(
-                                Icons.person_rounded,
-                                color: Colors.white,
-                                size: 48,
-                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(60),
+                                child:
+                              Image.asset("images/hector.jpeg")
+                              )
                             ),
                           ),
                           
@@ -194,7 +194,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                 
                 // Nom et informations
                 Text(
-                  'Alex Martin',
+                  'Hector Priser',
                   style: AppTypography.title1.copyWith(
                     color: AppColors.textPrimary,
                     fontWeight: AppTypography.bold,

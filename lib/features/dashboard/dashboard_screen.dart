@@ -7,6 +7,7 @@ import '../../shared/widgets/quick_actions.dart';
 import '../../shared/widgets/mental_weather_card.dart';
 import '../../shared/widgets/modern_stats_card.dart';
 import '../../shared/widgets/animated_wellness_ring.dart';
+import '../../shared/widgets/daily_quote_card.dart';
 import 'package:go_router/go_router.dart';
 
 /// Écran principal - Dashboard ultra moderne de santé mentale
@@ -77,6 +78,11 @@ class _DashboardScreenState extends State<DashboardScreen>
                   
                   // Section statistiques rapides
                   _buildStatsSection(),
+                  
+                  const SizedBox(height: AppSpacing.sectionSpacing),
+                  
+                  // Citation du jour
+                  DailyQuoteCard(),
                   
                   const SizedBox(height: AppSpacing.sectionSpacing),
                   

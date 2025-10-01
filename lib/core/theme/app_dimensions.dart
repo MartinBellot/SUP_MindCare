@@ -45,7 +45,7 @@ class AppSpacing {
   static const double cardMargin = 12.0;
   
   /// Espacement des sections
-  static const double sectionSpacing = 24.0;
+  static const double sectionSpacing = 32.0;
   
   /// Espacement des éléments de liste
   static const double listItemSpacing = 12.0;

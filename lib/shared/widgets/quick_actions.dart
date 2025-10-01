@@ -11,6 +11,7 @@ class QuickActions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 16,
+      runSpacing: 16,
       alignment: WrapAlignment.spaceBetween,
       children: [
         _QuickActionCard(
@@ -127,7 +128,8 @@ class _QuickActionCardState extends State<_QuickActionCard>
         return Transform.scale(
           scale: _scaleAnimation.value,
           child: Container(
-            height: 180,
+            width:  160,
+            height: 160,
             decoration: BoxDecoration(
               gradient: widget.gradient,
               borderRadius: AppBorderRadius.cardRadius,
